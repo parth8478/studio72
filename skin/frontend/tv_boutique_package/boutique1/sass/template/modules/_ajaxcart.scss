@@ -1,0 +1,165 @@
+
+/* Ajax Cart Mini - Loadding ==================================================*/ 
+
+#wraper_ajax.loadding_ajaxcart, .ajax_loading, .loadding {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  color: #666;
+  background-color: #fff;
+  margin-top: -20px;
+  margin-left: -20px;
+  @include border-radius (3px);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  display: none;
+  z-index: 999;
+  @include box-shadow (1px 1px 5px 1px #ddd);
+}
+
+.wrapper_inboxCart {
+  position: fixed;
+  width: 320px;
+  height: auto;
+  background: #fff;
+  z-index: 999999;
+  border: 1px solid #ddd;
+  opacity: 1;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -160px;
+  display: block;
+  padding: 0;
+}
+
+
+.wrapper_inboxCart p.info {
+  color: #262626;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid #efefef;
+  padding: 12px 10px;
+  text-align: center;
+  margin: 0;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.51);
+}
+
+/* top cart  */
+
+.header-cart-mini {
+  .top-cart-content {
+    width: 320px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-right: 0;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    @extend .box-shadow;
+    display: none;
+    text-align: center;
+    .empty {
+      padding: 15px 0;
+    }
+  }
+  &:hover .top-cart-content {
+    display: block;
+  }
+}
+
+.top-subtotal {
+  margin: 15px 0 0;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: right;
+  clear: both;
+  padding: 10px 0 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.top-cart-content {
+  li.item {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .product-details {
+    position: relative;
+    padding-right: 15px;
+    text-align: left;
+    margin-left: 70px;
+    .product-name a {
+      font-size: 13px;
+    }
+    .btn-remove {
+      position: absolute;
+      right: -5px;
+      top: 4px;
+      text-indent: 0;
+      font-size: 14px;
+      color: $main-color;
+    }
+    .btn-edit {
+      position: absolute;
+      right: 15px;
+      top: 4px;
+      display: none;
+    }
+  }
+  .actions {
+    padding: 0;
+    margin: 25px 0 0;
+    text-align: center;
+    button.button {
+      margin: 0 3px;
+      span span {
+        padding: 5px 20px;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+      &.view-cart {
+        span span {
+          border: 1px solid #222;
+          background: none;
+          color: #222;
+        }
+        &:hover {
+          span span {
+            background-color: #222;
+            color: #fff;
+          }
+        }
+      }
+      &.check-out {
+        span span { 
+          background: $main-color;
+          color: #fff;
+          border: 1px solid $main-color;
+        }
+        &:hover {
+          span span {
+            background: #222;
+            border-color: #222;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-cart-contain .product-details .price {
+  width: auto;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.top-subtotal span {
+  font-size: 14px;
+  color: #000;
+}

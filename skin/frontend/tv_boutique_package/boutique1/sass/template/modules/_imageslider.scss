@@ -1,0 +1,147 @@
+/*----------------------------------------------- Banner Slider -----------------------------------------------*/
+
+/* Direction Nav */
+.tv-nivoslider {
+  .nivo-directionNav {
+    a {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      color: #fff;
+      font-size: 0;
+      text-align: center;
+      background-color: rgba(255,255,255,0.2);
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      z-index: 99;
+      @extend .transition;
+      &:hover {
+       background: $main-color;
+      }
+    }
+    .nivo-nextNav {
+      right: -60px;
+      &:before {
+        content: "\f105";
+        font-family: $font-icon;
+        font-size: 24px;
+      }
+    }
+    .nivo-prevNav {
+      left: -60px;
+      &:before {
+        content: "\f104";
+        font-family: $font-icon;
+        font-size: 24px;
+      }
+    }
+  }
+  &:hover {
+    .nivo-directionNav {
+      .nivo-nextNav  {
+        right: 0;
+       }
+       .nivo-prevNav {
+        left: 0;
+       }
+    }
+  }
+}
+
+
+/* Control Nav */
+
+.banner-slideshow {
+  position: relative;
+}
+ 
+
+.nivo-controlNav {
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  a {
+    border: 0 none;
+    display: inline-block;
+    height: 7px;
+    margin: 0 2px;
+    text-indent: -9999px;
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+    background: rgba(255, 255, 255, 0.8);
+    &:hover, &.active {
+      background-color: #db4c52;
+    }
+  }
+}
+
+
+/* The Nivo Slider styles */
+
+.nivoSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    max-width: none;
+  }
+}
+
+.nivo-main-image {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* If an image is wrapped in a link */
+
+.nivoSlider a.nivo-imageLink {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 6;
+  display: none;
+  background: white;
+  filter: alpha(opacity = 0);
+  opacity: 0;
+}
+
+/* The slices and boxes in the Slider */
+
+.nivo-slice {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  top: 0;
+}
+
+.nivo-box {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+  img {
+    display: block;
+  }
+}
+
+.nivo-html-caption {
+  display: none;
+}

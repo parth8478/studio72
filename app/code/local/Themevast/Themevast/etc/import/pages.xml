@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<boutique>
+    <resources>
+        <resource>
+            <title>Boutique1 Magento Theme</title>
+            <identifier>boutique1</identifier>
+            <root_template>one_column</root_template>
+		<content><![CDATA[
+		<div class="home-content">{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="block_quote"}}{{block type="featuredproduct/featuredproduct" name="featuredproduct" template="themevast/featuredproduct/featuredproduct.phtml" }}{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="block_promotion"}} {{block type="newproduct/newproduct" name="newproduct" template="themevast/newproduct/newproduct.phtml" }}{{block type="blog/side" name="blog.slider" template="themevast/blog/blog_slider.phtml"}}{{block type="brandlogo/brandlogo" name="brand.logo" template="themevast/brandlogo/brandlogo.phtml"}}{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="block_video_newsletter"}}{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="block_policies"}}</div>
+		]]></content>
+		<sort_order>1</sort_order>
+            <is_active>1</is_active>
+        </resource>
+    </resources>
+</boutique>

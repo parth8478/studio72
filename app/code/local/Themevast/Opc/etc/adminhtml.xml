@@ -1,0 +1,65 @@
+<?xml version="1.0"?> 
+<config>
+    <menu>
+        <themevast module="opc">
+            <title>Themevast</title>
+            <sort_order>80</sort_order>
+            <children>
+                <opc translate="title" module="opc">
+                    <title>One Page Checkout</title>
+                    <sort_order>2</sort_order>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/system_config/edit/section/opc</action>
+                </opc>
+           </children>
+        </themevast>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <Themevast>
+                        <children>
+                            <config>
+                                <children>
+                                    <opc>
+                                        <title>One Page Checkout</title>
+                                    </opc>
+                                </children>
+                            </config>
+                        </children>
+                    </Themevast>       
+                    <Themevast translate="title" module="opc">
+                        <title>Themevast</title>
+                        <sort_order>89</sort_order>               
+                        <children>
+                            <opc translate="title" module="opc">
+                                <title>One Page Checkout</title>
+                                <sort_order>20</sort_order>
+                                <children>
+                                    <configuration>
+                                        <title>Configuration</title>
+                                        <sort_order>1</sort_order>
+                                        <action>adminhtml/system_config/edit/section/opc</action>
+                                    </configuration>
+                                </children>
+                            </opc>
+                        </children>
+                    </Themevast>   
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <opc>
+                                        <title>One Page Checkout</title>
+                                    </opc>
+                                </children>
+                            </config>
+                        </children>
+                    </system>                 
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
+

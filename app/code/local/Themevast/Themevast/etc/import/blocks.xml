@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<boutique>
+    <blocks>
+	
+		<block>
+            <title>Top Menu Links</title>
+            <identifier>megamenu_link</identifier>
+            <content>
+                <![CDATA[
+                <ul>
+					<li class="ui-menu-item level0 classic parent"><a href="#">Pages</a>
+					<div class="level0 submenu">
+					<ul class="subchildmenu">
+					<li class="ui-menu-item level1"><a href="{{store direct_url="about-magento-demo-store"}}">About Us</a></li>
+					<li class="ui-menu-item level1"><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+					<li class="ui-menu-item level1"><a href="{{store direct_url="wishlist"}}">Wishlist</a></li>
+					<li class="ui-menu-item level1"><a href="{{store direct_url="checkout"}}">Checkout</a></li>
+					<li class="ui-menu-item level1"><a href="{{store direct_url="about-magento-demo-store"}}">Look Book</a></li>
+					<li class="ui-menu-item level1"><a href="{{store direct_url="no-route"}}">404 Page</a></li>
+					</ul>
+					</div>
+					</li>
+					<li class="ui-menu-item level0 classic parent features"><a href="#">Features</a>
+					<div class="level0 submenu">
+					<div class="row">
+					<div class="col-sm-6">
+					<div class="element-icon">
+					<div class="icon"><img alt="" src="{{media url="wysiwyg/icon-custom.png"}}" /></div>
+					<div class="content">
+					<h4 class="title">EASY CUSTOMIZE</h4>
+					<div class="text">
+					<p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+					</div>
+					</div>
+					</div>
+					<div class="element-icon">
+					<div class="icon"><img alt="" src="{{media url="wysiwyg/icon-color.png"}}" /></div>
+					<div class="content">
+					<h4 class="title">UNLIMITED COLOR</h4>
+					<div class="text">
+					<p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+					</div>
+					</div>
+					</div>
+					</div>
+					<div class="col-sm-6">
+					<div class="element-icon">
+					<div class="icon"><img alt="" src="{{media url="wysiwyg/icon-responsive.png"}}" /></div>
+					<div class="content">
+					<h4 class="title">RESPONSIVE DESIGN</h4>
+					<div class="text">
+					<p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+					</div>
+					</div>
+					</div>
+					<div class="element-icon">
+					<div class="icon"><img alt="" src="{{media url="wysiwyg/icon-document.png"}}" /></div>
+					<div class="content">
+					<h4 class="title">EASY DOCUMENT</h4>
+					<div class="text">
+					<p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</li>
+					<li class="ui-menu-item level0"><a href="{{store direct_url="blog"}}">Blog</a></li>
+					</ul>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Categories Icon</title>
+            <identifier>categories_icon</identifier>
+            <content>
+                <![CDATA[
+                <ul>
+					<li><a href="{{store url="women-3.html"}}"><span class="img"><img alt="" src="{{media url="wysiwyg/8.png"}}" /></span><span>Clothing</span></a></li>
+					<li><a href="{{store url="men-3.html"}}"><span class="img"><img alt="" src="{{media url="wysiwyg/9.png"}}" /></span><span>Sneakers</span></a></li>
+					<li><a href="{{store url="accessories.html"}}"><span class="img"><img alt="" src="{{media url="wysiwyg/10.png"}}" /></span><span>Accessories</span></a></li>
+					<li><a href="{{store url="men-3/bags.html"}}"><span class="img"><img alt="" src="{{media url="wysiwyg/11.png"}}" /></span><span>Handbags</span></a></li>
+					</ul>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Quote</title>
+            <identifier>block_quote</identifier>
+            <content>
+                <![CDATA[
+                <div class="block-quote">
+				<div class="row">
+				<div class="col-sm-4">
+				<div class="box-logo"><img alt="" src="{{media url="wysiwyg/logo.png"}}" /></div>
+				</div>
+				<div class="col-sm-8 col-md-7">
+				<div class="quote">Boutique is a reflection of you! A sexy and confident woman that radiates through his daring wardrobe. We bring you the best of all things glam and sexy while keeping in mind that high quality doesn&rsquo;t have to come at a high price</div>
+				</div>
+				</div>
+				</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Footer Information</title>
+            <identifier>footer_info</identifier>
+            <content>
+                <![CDATA[
+                <div class="row flex-flow">
+					<div class="col-sm-12 col-md-4 footer-sidebar">
+					<div class="widget contact-info"><span class="text-primary PlayfairDisplay">Talk to Us Now !</span>
+					<h3 class="widget-title">Contact Us</h3>
+					<div class="content">
+					<p class="address">5701 Outlets at Tejon Pkwy, Tejon ranch CA 93203 UK.</p>
+					<p class="phone">(+800) 6868 2268</p>
+					</div>
+					</div>
+					</div>
+					<div class="col-sm-12 col-md-4 footer-sidebar">
+					<div class="widget our-service"><span class="text-primary PlayfairDisplay">Talk to Us Now !</span>
+					<h3 class="widget-title">OUR SERVICES</h3>
+					<div class="content">
+					<ul>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Custom Service</a></li>
+					<li><a href="#">Terms &amp; Condition</a></li>
+					<li><a href="#">Order History</a></li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					<div class="col-sm-12 col-md-4 footer-sidebar">
+					<div class="widget widget_social"><span class="text-primary PlayfairDisplay">Talk to Us Now !</span>
+					<h3 class="widget-title">FOLLOW US</h3>
+					<div class="content">
+					<div class="social"><a href="#"><i class="fa fa-facebook">facebook</i></a> <a href="#"><i class="fa fa-twitter">twitter</i></a> <a href="#"><i class="fa fa-google-plus">google</i></a> <a href="#"><i class="fa fa-instagram">instagram</i></a> <a href="#"><i class="fa fa-pinterest">pinterest</i></a></div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        
+        <block>
+            <title>Contact Maps</title>
+            <identifier>contact_maps</identifier>
+            <content>
+                <![CDATA[
+                <div class="col-md-3 col-sm-6 store-info">
+					<ul class="list-info">
+					<li class="item-info main-info">
+					<div class="info-content"><em class="fa fa-map-marker">&nbsp;</em>
+					<h2>Address 1</h2>
+					<div class="des-info">Sed ut perspiciatis unde omnis 907 Street Name, Los Angeles</div>
+					</div>
+					</li>
+					<li class="item-info email-info">
+					<div class="info-content"><em class="fa fa-envelope">&nbsp;</em>
+					<h2>Email</h2>
+					<div class="des-info"><a class="mailto" title="Send Email" href="mailto:Support1@themevast.com">Support1@themevast.com</a><br /> <a class="mailto" title="Send Email" href="mailto:Support2@themevast.com">Support2@themevast.com</a></div>
+					</div>
+					</li>
+					<li class="item-info phone-info">
+					<div class="info-content"><em class="fa fa-phone">&nbsp;</em>
+					<h2>Phone</h2>
+					<div class="des-info"><a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a><br /> <a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a></div>
+					</div>
+					</li>
+					</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 store-info">
+					<ul class="list-info">
+					<li class="item-info main-info">
+					<div class="info-content"><em class="fa fa-map-marker">&nbsp;</em>
+					<h2>Address 2</h2>
+					<div class="des-info">Sed ut perspiciatis unde omnis 709 Street Name, Los Angeles</div>
+					</div>
+					</li>
+					<li class="item-info email-info">
+					<div class="info-content"><em class="fa fa-envelope">&nbsp;</em>
+					<h2>Email</h2>
+					<div class="des-info"><a class="mailto" title="Send Email" href="mailto:Support1@themevast.com">Support1@themevast.com</a><br /> <a class="mailto" title="Send Email" href="mailto:Support2@themevast.com">Support2@themevast.com</a></div>
+					</div>
+					</li>
+					<li class="item-info phone-info">
+					<div class="info-content"><em class="fa fa-phone">&nbsp;</em>
+					<h2>Phone</h2>
+					<div class="des-info"><a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a><br /> <a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a></div>
+					</div>
+					</li>
+					</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 store-info">
+					<ul class="list-info">
+					<li class="item-info main-info">
+					<div class="info-content"><em class="fa fa-map-marker">&nbsp;</em>
+					<h2>Address 3</h2>
+					<div class="des-info">Sed ut perspiciatis unde omnis 709 Street Name, Los Angeles</div>
+					</div>
+					</li>
+					<li class="item-info email-info">
+					<div class="info-content"><em class="fa fa-envelope">&nbsp;</em>
+					<h2>Email</h2>
+					<div class="des-info"><a class="mailto" title="Send Email" href="mailto:Support1@themevast.com">Support1@themevast.com</a><br /> <a class="mailto" title="Send Email" href="mailto:Support2@themevast.com">Support2@themevast.com</a></div>
+					</div>
+					</li>
+					<li class="item-info phone-info">
+					<div class="info-content"><em class="fa fa-phone">&nbsp;</em>
+					<h2>Phone</h2>
+					<div class="des-info"><a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a><br /> <a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-8910">0123-4567-89</a></div>
+					</div>
+					</li>
+					</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 store-info">
+					<ul class="list-info">
+					<li class="item-info main-info">
+					<div class="info-content"><em class="fa fa-map-marker">&nbsp;</em>
+					<h2>Address 4</h2>
+					<div class="des-info">Sed ut perspiciatis unde omnis 907 Street Name, Los Angeles</div>
+					</div>
+					</li>
+					<li class="item-info email-info">
+					<div class="info-content"><em class="fa fa-envelope">&nbsp;</em>
+					<h2>Email</h2>
+					<div class="des-info"><a class="mailto" title="Send Email" href="mailto:Support1@themevast.com">Support1@themevast.com</a><br /> <a class="mailto" title="Send Email" href="mailto:Support2@themevast.com">Support2@themevast.com</a></div>
+					</div>
+					</li>
+					<li class="item-info phone-info">
+					<div class="info-content"><em class="fa fa-phone">&nbsp;</em>
+					<h2>Phone</h2>
+					<div class="des-info"><a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a><br /> <a class="call-phone" title="Call: 0123-4567-89" href="tel:0123-4567-89">0123-4567-89</a></div>
+					</div>
+					</li>
+					</ul>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Promotion</title>
+            <identifier>block_promotion</identifier>
+            <content>
+                <![CDATA[
+                <div class="block-promotion">FREE UK DELIVERY + RETURN OVER &pound;85.00 (EXCLUDING HOMEWARE) | FREE UK COLLECT FROM STORE</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Product1 ( Home 1 )</title>
+            <identifier>banner_product1</identifier>
+            <content>
+                <![CDATA[
+                <div class="banner-product banner1"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique1/banner1.jpg"}}" /></a></div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Banner Product 2 ( Home 2 )</title>
+            <identifier>banner_product2</identifier>
+            <content>
+                <![CDATA[
+                <div class="banner-product banner2"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique1/banner2.jpg"}}" /></a></div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+        <block>
+            <title>Block Video Newsletter</title>
+            <identifier>block_video_newsletter</identifier>
+            <content>
+                <![CDATA[
+                <div class="block-video-newsletter">
+				<div class="row">
+				<div class="col-sm-12 col-md-7">
+				<div class="video video-lightbox"><img alt="" src="{{media url="wysiwyg/bg_video.png"}}" /> <a class="link-lightbox button-play" href="#" data-videoid="134060140" data-videosite="vimeo">video</a></div>
+				</div>
+				<div class="col-sm-12 col-md-5">{{block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml"}}</div>
+				</div>
+				</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Policies</title>
+            <identifier>block_policies</identifier>
+            <content>
+                <![CDATA[
+                	<div class="block-policies">
+					<div class="row">
+					<div class="col-sm-12 col-md-4">
+					<div class="element-icon style2">
+					<div class="icon"><i class="flaticon flaticon-origami28">i</i></div>
+					<div class="content">
+					<h4 class="title">FREE SHIPPING WORLD WIDE</h4>
+					</div>
+					</div>
+					</div>
+					<div class="col-sm-12 col-md-4">
+					<div class="element-icon style2">
+					<div class="icon"><i class="flaticon flaticon-curvearrows9">i</i></div>
+					<div class="content">
+					<h4 class="title">MONEY BACK GUARANTEE</h4>
+					</div>
+					</div>
+					</div>
+					<div class="col-sm-12 col-md-4">
+					<div class="element-icon style2">
+					<div class="icon"><i class="flaticon flaticon-headphones54">i</i></div>
+					<div class="content">
+					<h4 class="title">ONLINE SUPPORT 24/7</h4>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Footer Payment</title>
+            <identifier>footer_payment</identifier>
+            <content>
+                <![CDATA[
+                	<div class="payment">
+					<div class="head"><span>We Accept</span><span class="PlayfairDisplay">Online Payment Be Secured</span></div>
+					<div class="list"><a class="item" href="#"><img alt="" src="{{media url="wysiwyg/payment/1.png"}}" /></a> <a class="item" href="#"><img alt="" src="{{media url="wysiwyg/payment/2.png"}}" /></a> <a class="item" href="#"><img alt="" src="{{media url="wysiwyg/payment/3.png"}}" /></a> <a class="item" href="#"><img alt="" src="{{media url="wysiwyg/payment/4.png"}}" /></a></div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Images Slider ( Home 2 )</title>
+            <identifier>banner_slider</identifier>
+            <content>
+                <![CDATA[
+                	<div class="owl-carousel">
+					<div class="item"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique2/banner1.jpg"}}" /></a></div>
+					<div class="item"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique2/banner2.jpg"}}" /></a></div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Content ( Home2)</title>
+            <identifier>banner_content2</identifier>
+            <content>
+                <![CDATA[
+                	<div class="banner-content">
+					<div class="row">
+					<div class="col-sm-12 col-md-6">
+					<div class="banner-box banner-box1"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique2/5.jpg"}}" /></a></div>
+					</div>
+					<div class="col-sm-12 col-md-6">
+					<div class="row">
+					<div class="col-xs-6">
+					<div class="banner-box banner-box2"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique2/6.jpg"}}" /></a></div>
+					</div>
+					<div class="col-xs-6">
+					<div class="banner-box banner-box3"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique2/7.jpg"}}" /></a></div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Header Slogan</title>
+            <identifier>slogan</identifier>
+            <content>
+                <![CDATA[
+                <p>"Boutique is a reflection of you!"</p>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Top Content ( Home 3 )</title>
+            <identifier>banner_top3</identifier>
+            <content>
+                <![CDATA[
+                	<div class="banner-top">
+					<div class="row">
+					<div class="col-xs-4">
+					<div class="banner-box"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique3/8.jpg"}}" /></a></div>
+					</div>
+					<div class="col-xs-4">
+					<div class="banner-box"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique3/9.jpg"}}" /></a></div>
+					</div>
+					<div class="col-xs-4">
+					<div class="banner-box"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique3/10.jpg"}}" /></a></div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Banner Top ( Home 4 )</title>
+            <identifier>banner_top4</identifier>
+            <content>
+                <![CDATA[
+                	<div class="banner-top">
+					<div class="row">
+					<div class="col-sm-5">
+					<div class="banner-box banner-box1">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique4/11.jpg"}}" /></a></div>
+					<div class="text">
+					<h3>WINTER SALE <span>75%OFF</span></h3>
+					<p>Checkout Our HotSale Products This Week !</p>
+					<a href="#">Shop Now</a></div>
+					</div>
+					</div>
+					<div class="col-sm-4">
+					<div class="banner-box banner-box2">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique4/12.jpg"}}" /></a></div>
+					<div class="text">
+					<h3>MENSWEAR</h3>
+					</div>
+					</div>
+					</div>
+					<div class="col-sm-3">
+					<div class="banner-box banner-box3">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique4/13.jpg"}}" /></a></div>
+					<div class="text">
+					<h3>Handbag</h3>
+					</div>
+					</div>
+					<div class="banner-box banner-box4">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique4/14.jpg"}}" /></a></div>
+					<div class="text">
+					<h3>SNEAKERS</h3>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Top ( Home 5 )</title>
+            <identifier>banner_top5</identifier>
+            <content>
+                <![CDATA[
+                	<div class="banner-top">
+					<div class="row">
+					<div class="col-xs-6">
+					<div class="banner-box"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique5/15.jpg"}}" /></a></div>
+					</div>
+					<div class="col-xs-6">
+					<div class="banner-box"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique5/16.jpg"}}" /></a></div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Categories Icon 2</title>
+            <identifier>categories_icon2</identifier>
+            <content>
+                <![CDATA[
+                	<div class="categories-icon">
+					<div class="title-cate-headding">
+					<h2>CATEGORIES</h2>
+					<p>Find all items you want by select our featured categories</p>
+					</div>
+					<div class="owl-carousel">
+					<ul class="cate-list">
+					<li><a href="{{store url="women/clothes.html"}}"><img alt="" src="{{media url="wysiwyg/4.png"}}" /><span>Clothing</span></a></li>
+					<li><a href="{{store url="men/shoes.html"}}"><img alt="" src="{{media url="wysiwyg/5.png"}}" /><span>Sneakers</span></a></li>
+					<li><a href="{{store url="accessories.html"}}"><img alt="" src="{{media url="wysiwyg/6.png"}}" /><span>Accessories</span></a></li>
+					<li><a href="{{store url="women/bags.html"}}"><img alt="" src="{{media url="wysiwyg/7.png"}}" /><span>Handbags</span></a></li>
+					</ul>
+					<ul class="cate-list">
+					<li><a href="{{store url="women/clothes.html"}}"><img alt="" src="{{media url="wysiwyg/4.png"}}" /><span>Clothing</span></a></li>
+					<li><a href="{{store url="men/shoes.html"}}"><img alt="" src="{{media url="wysiwyg/5.png"}}" /><span>Sneakers</span></a></li>
+					<li><a href="{{store url="accessories.html"}}"><img alt="" src="{{media url="wysiwyg/6.png"}}" /><span>Accessories</span></a></li>
+					<li><a href="{{store url="women/bags.html"}}"><img alt="" src="{{media url="wysiwyg/7.png"}}" /><span>Handbags</span></a></li>
+					</ul>
+					<ul class="cate-list">
+					<li><a href="{{store url="women/clothes.html"}}"><img alt="" src="{{media url="wysiwyg/4.png"}}" /><span>Clothing</span></a></li>
+					<li><a href="{{store url="men/shoes.html"}}"><img alt="" src="{{media url="wysiwyg/5.png"}}" /><span>Sneakers</span></a></li>
+					<li><a href="{{store url="accessories.html"}}"><img alt="" src="{{media url="wysiwyg/6.png"}}" /><span>Accessories</span></a></li>
+					<li><a href="{{store url="women/bags.html"}}"><img alt="" src="{{media url="wysiwyg/7.png"}}" /><span>Handbags</span></a></li>
+					</ul>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Left Content ( Home 6 )</title>
+            <identifier>banner_left6</identifier>
+            <content>
+                <![CDATA[
+                	<div class="banner-left"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique6/17.jpg"}}" /></a></div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Content ( Home 7 )</title>
+            <identifier>banner_content7</identifier>
+            <content>
+                <![CDATA[
+                	<div class="banner-content"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique7/18.jpg"}}" /></a></div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Block Social</title>
+            <identifier>block_social</identifier>
+            <content>
+                <![CDATA[
+                	<div class="social"><a href="#"><i class="fa fa-facebook">facebook</i></a> <a href="#"><i class="fa fa-twitter">twitter</i></a> <a href="#"><i class="fa fa-google-plus">google</i></a> <a href="#"><i class="fa fa-instagram">instagram</i></a> <a href="#"><i class="fa fa-pinterest">pinterest</i></a></div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Images Slider ( Home 10 )</title>
+            <identifier>banner_slider10</identifier>
+            <content>
+                <![CDATA[
+                	<div class="owl-carousel">
+					<div class="item"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique10/banner1.jpg"}}" /></a></div>
+					<div class="item"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique10/banner2.jpg"}}" /></a></div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Banner Images Slider ( Home 11 )</title>
+            <identifier>banner_slider11</identifier>
+            <content>
+                <![CDATA[
+                	<div class="owl-carousel">
+					<div class="item">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique11/11-1.png"}}" /></a></div>
+					<div class="content-text">
+					<h4 class="subtitle">Trending</h4>
+					<h3 class="title">Men fashion</h3>
+					<a class="shop-now" href="#">shop now!</a></div>
+					</div>
+					<div class="item">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique11/11-2.png"}}" /></a></div>
+					<div class="content-text">
+					<h4 class="subtitle">Trending</h4>
+					<h3 class="title">autumn fashion</h3>
+					<a class="shop-now" href="#">shop now!</a></div>
+					</div>
+					<div class="item">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique11/11-3.png"}}" /></a></div>
+					<div class="content-text">
+					<h4 class="subtitle">Trending</h4>
+					<h3 class="title">Women fashion</h3>
+					<a class="shop-now" href="#">shop now!</a></div>
+					</div>
+					<div class="item">
+					<div class="image"><a href="#"><img alt="" src="{{media url="wysiwyg/boutique11/11-4.png"}}" /></a></div>
+					<div class="content-text">
+					<h4 class="subtitle">Trending</h4>
+					<h3 class="title">Shoes fashion</h3>
+					<a class="shop-now" href="#">shop now!</a></div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+	
+    </blocks>
+
+</boutique>
+

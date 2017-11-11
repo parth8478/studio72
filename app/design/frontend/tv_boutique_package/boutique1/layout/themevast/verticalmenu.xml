@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addJs" ifconfig="verticalmenu/verticalmenu_config/enabled"><script>themevast/verticalmenu/accordion.js</script></action>
+        </reference>
+        <reference name="left">
+            <block type="verticalmenu/verticalmenu" before="catalog.leftnav" name="ma.verticalmenuleft" template="themevast/verticalmenu/verticalmenuleft.phtml" />
+        </reference>
+    </default>
+</layout> 
