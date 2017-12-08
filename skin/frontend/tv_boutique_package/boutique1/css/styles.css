@@ -3856,7 +3856,7 @@ tr.summary-details-excluded {
       margin: 0 5px;
       color: #333;
       font-size: 12px; }
-  .ratings .rating-box {
+   .rating-box {
     width: 69px;
     height: 13px;
     font-size: 0;
@@ -3866,7 +3866,7 @@ tr.summary-details-excluded {
     overflow: hidden;
     float: left;
     margin-right: 10px; }
-    .ratings .rating-box .rating {
+    .rating-box .rating {
       float: left;
       height: 13px;
       background: url(../images/bkg_rating.gif) 0 100% repeat-x; }
@@ -6894,10 +6894,12 @@ p.welcome-msg {
   float: left; }
   .nav_megamenu .block2 img {
     margin: 0 10px; }
-
+.nav_megamenu div.megamenu .level-top  .new, 
+.nav_megamenu div.megamenu .level-top  .hot {
+	display: none;
+}
 .nav_megamenu div.dropdown .block1 {
   padding: 25px 30px;
-  overflow: hidden;
   float: left; }
   .nav_megamenu div.dropdown .block1 .block-contain {
     padding: 25px; }
