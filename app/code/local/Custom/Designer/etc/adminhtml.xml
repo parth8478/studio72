@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <designer module="designer">
+            <title>Blog</title>
+            <sort_order>71</sort_order>
+            <children>
+                <new module="designer" translate="title">
+                    <title>Add Designer</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/customdesigner_manage_designer/new</action>
+                </new>
+                <designers module="designer" translate="title">
+                    <title>Designers</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/customdesigner_manage_designer/index</action>
+                </designers>
+            </children>
+        </designer>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <designer>
+                        <title>Designer</title>
+                        <sort_order>70</sort_order>
+                        <children>
+                            <designers>
+                                <title>Manage Designers</title>
+                                <sort_order>0</sort_order>
+                            </designers>
+                        </children>
+                    </designer>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <designer>
+                                        <title>Designer</title>
+                                    </designer>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,43 @@
+<?php $url = Mage::helper("adminhtml")->getUrl('usage/adminhtml_example/unlocksession');?>
+<script type="text/javascript">
+(function ($) {
+            //Define default
+
+            var docTimeout = 36000;
+            var form_key = "<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>";
+            /*
+            Handle raised idle/active events
+            */
+
+            $(document).on("idle.idleTimer", function (event, elem, obj) {
+                   $.ajax({
+                    url: "<?php echo $url; ?>"
+                    });
+            });
+            $(document).idleTimer(docTimeout);
+
+
+            /*//For demo purposes, style based on initial state
+            if ($(document).idleTimer("isIdle")) {
+                $("#docStatus")
+                  .val(function (i, v) {
+                      return v + "Initial Idle State @ " + moment().format() + " \n";
+                  })
+                  .removeClass("alert-success")
+                  .addClass("alert-warning")
+                  .scrollToBottom();
+            } else {
+                $('#docStatus')
+                    .val(function (i, v) {
+                        return v + "Initial Active State @ " + moment().format() + " \n";
+                    })
+                    .addClass("alert-success")
+                    .removeClass("alert-warning")
+                    .scrollToBottom();
+            }
+            //For demo purposes, display the actual timeout on the page
+            $('#docTimeout').text(docTimeout / 1000);*/
+
+
+        })(jQuery);
+</script>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>custom_designer/css/style.css</name>
+            </action>
+        </reference>
+    </default>
+    
+        
+    <designer_index_index>
+        <reference name="content">
+            <block type="desginer/desginer" name="desginer" template="custom_designer/desginer.phtml"/>
+        </reference>
+    </designer_index_index>
+
+    <designer_index_list>
+        <reference name="content">
+            <block type="designer/designer" name="designer" template="custom_designer/designer.phtml">
+                <block type="designer/product_toolbar" name="custom_designer_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="designer/html_pager" name="product_list_toolbar_pager"/>
+                </block>
+            </block>
+        </reference>
+    </designer_index_list>
+    
+    
+    <designer_designer_view>
+        <reference name="content">
+            <block type="designer/designer" name="desginer-view" template="custom_designer/view.phtml"/>
+        </reference>
+    </designer_designer_view>
+</layout>

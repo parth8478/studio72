@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <name>custom_designer/css/style.css</name>
+            </action>
+        </reference>
+    </default>
+    <adminhtml_customdesigner_manage_designer_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="designer/manage_designer" name="designer" />
+        </reference>
+    </adminhtml_customdesigner_manage_designer_index>
+    <adminhtml_customdesigner_manage_designer_edit>
+        <update handle="editor" />
+    </adminhtml_customdesigner_manage_designer_edit>
+    <adminhtml_customdesigner_manage_designer_new>
+        <update handle="editor" />
+    </adminhtml_customdesigner_manage_designer_new>
+    <adminhtml_customdesigner_manage_comment_index>
+        <reference name="content">
+            <block type="designer/manage_comment" name="comment" />
+        </reference>
+    </adminhtml_customdesigner_manage_comment_index>
+    <adminhtml_customdesigner_manage_cat_index>
+        <reference name="content">
+            <block type="adminhtml/store_switcher" name="store_switcher" before="-" />
+            <block type="designer/manage_cat" name="cat" />
+        </reference>
+    </adminhtml_customdesigner_manage_cat_index>
+</layout>

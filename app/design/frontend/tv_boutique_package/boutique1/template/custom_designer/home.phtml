@@ -1,0 +1,26 @@
+<?php
+$collection = Mage::getModel('designer/designer')->getCollection();
+$collection->addFieldToFilter('featured',1);
+$media = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+$base =  Mage::getBaseUrl();
+?>
+    
+    
+<div class="blog-wrapper">
+    <div class="blog-content">
+        <div class="bx-title blog-title"><h2>Our Designers</h2></div>
+        <div class="blog-grid">
+            <?php
+            foreach ($collection as $collections){
+                ?>
+            <a href="<?php echo $base."designer/post/view" ?>"><img src="<?php echo $media.$collections->getImage(); ?>" alt="<?php echo $collections->getImage();?>"></a>
+            <?php 
+            echo "Name : ".$collections->getName();
+            }
+            ?>
+        </div>
+    </div>
+</div>
+
+
+

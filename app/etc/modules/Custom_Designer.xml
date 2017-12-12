@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Custom_Designer>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Custom_Designer>
+  </modules>
+</config>
