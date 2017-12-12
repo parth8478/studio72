@@ -35,11 +35,5 @@
 !/media/xmlconnect/system/ok.gif
 
 
-/var/*
-!/var/cache
-!/var/.htaccess
-
-!/var/package
-/var/package/*
-!/var/package/*.xml
-
+var/
+error_log

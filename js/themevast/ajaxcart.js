@@ -224,7 +224,7 @@ function ajaxToCart(url,data,mine) {
         jQuery.ajax({
             url: url,
             dataType: 'jsonp',
-            crossDomain: true,
+           /*  crossDomain: true, */
             type : 'post',
             data : data,
             beforeSend: function(){ loadingAjaxcart(true); },
@@ -319,7 +319,7 @@ function removeCartInCheckoutPage(){
         jQuery.ajax({
             url: delUrl,
             dataType: 'jsonp',
-            crossDomain: true,
+         /*    crossDomain: true, */
             beforeSend:function(){
                loadingAjaxcart(true);
             },

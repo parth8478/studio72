@@ -88,6 +88,10 @@
             }
 
         })(".block-subscribe.popup");
+
+        $('.actions button').on('click', function(){
+                Mage.Cookies.set('popupNewsletterOff', true); 
+        });
     });
 //]]>
 </script>

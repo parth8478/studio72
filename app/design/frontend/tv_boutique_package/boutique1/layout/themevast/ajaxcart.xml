@@ -3,7 +3,7 @@
     <default>
         <reference name="head">    
             <action method="addJs" ><script>themevast/jquery.min.js</script></action>
-            <action method="addJs"><script>themevast/ajaxcart.js</script></action>
+            <action method="addJs" ifconfig="ajaxcart/general/enabled"><script>themevast/ajaxcart.js</script></action>
             <action method="addJs"><script>themevast/jquery.matchHeight-min.js</script></action>
         </reference>
         <reference name="header">
