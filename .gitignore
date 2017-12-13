@@ -37,3 +37,4 @@
 
 var/
 error_log
+app/etc/local.xml
