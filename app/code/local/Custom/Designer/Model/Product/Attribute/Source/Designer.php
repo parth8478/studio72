@@ -46,11 +46,14 @@ class Custom_Designer_Model_Product_Attribute_Source_Designer
             $options = unserialize($cache);
         } else {
             $collection = Mage::getModel('designer/designer')->getResourceCollection();
-            $options = $collection->toOptionArray();
-            if (Mage::app()->useCache('config')) {
-                Mage::app()->saveCache(serialize($options), $cacheKey, array('config'));
+            $optionArray = array();
+            foreach ($collection as $collections) {
+                $optionArray[] = array(
+                    'value' => $collections->getDesignerId(),
+                    'label' => Mage::helper('designer')->__($collections->getName())
+                );
             }
+            return $optionArray;
         }
-        return $options;
     }
-}
+}   
