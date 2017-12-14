@@ -8,6 +8,7 @@ if(count($designer_data) > 0){
         $id = $data->getDesignerId();
         $name = $data->getName();
         ?>
+<a href="<?php echo $base."designer/designer/view/id/".$id;?>"><h2>Designer : <?php echo $name;?></h2> </a>
 <a href="<?php echo $base."designer/designer/view/id/".$id;?>"><img src="<?php echo $media.$image; ?>" alt="<?php echo $name;?>"></a>
         <?php 
     }
