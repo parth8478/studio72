@@ -53,6 +53,7 @@
         </reference>
         <reference name="left">
             <block type="catalogsearch/layer" name="catalogsearch.leftnav" after="currency" template="catalog/layer/view.phtml"/>
+            <block type="designer/designer" name="designer-nav" after="*" template="custom_designer/filter.phtml"/>
         </reference>
         <reference name="content">
             <block type="catalogsearch/result" name="search.result" template="catalogsearch/result.phtml">

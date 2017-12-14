@@ -9,7 +9,7 @@
         </reference>
     </default>
     
-        
+    
     <designer_index_index>
         <reference name="content">
             <block type="desginer/desginer" name="desginer" template="custom_designer/desginer.phtml"/>
