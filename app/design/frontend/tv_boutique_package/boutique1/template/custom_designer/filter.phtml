@@ -1,0 +1,16 @@
+<?php $designer_name = $this->getRequest()->getParam("q");
+$designer_data = $this->getDesignerbyName($designer_name);
+$media = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+$base =  Mage::getBaseUrl();
+if(count($designer_data) > 0){
+    foreach($designer_data as $data){
+        $image = $data->getImage();
+        $id = $data->getDesignerId();
+        $name = $data->getName();
+        ?>
+<a href="<?php echo $base."designer/designer/view/id/".$id;?>"><img src="<?php echo $media.$image; ?>" alt="<?php echo $name;?>"></a>
+        <?php 
+    }
+}
+
+?>
