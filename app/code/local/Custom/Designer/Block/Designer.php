@@ -35,20 +35,13 @@ class Custom_Designer_Block_Designer extends Mage_Core_Block_Template
         return $collection;
     }
 
-    protected function _prepareLayout()
-    {
-        
-    }
-
     protected function _prepareCollection()
     {
         if (!$this->getData('cached_collection')) {
             $sortOrder = $this->getCurrentOrder();
             $sortDirection = $this->getCurrentDirection();
             $collection = Mage::getModel('designer/designer')->getCollection();
-            //$collection->setOrder($collection->getConnection()->quote($sortOrder), $sortDirection);
             $collection->setPageSize(5);
-
             $this->setData('cached_collection', $collection);
         }
         return $this->getData('cached_collection');
@@ -68,6 +61,14 @@ class Custom_Designer_Block_Designer extends Mage_Core_Block_Template
     public function getDesigner($id){
         $collection = Mage::getModel('designer/designer')->getCollection();
         $collection->addFieldToFilter('designer_id',$id);
+        return $collection;
+    }
+    public function getDesignerbyName($name){
+        $collection = Mage::getModel('designer/designer')->getCollection();
+        $collection->addFieldToSelect('designer_id');
+        $collection->addFieldToSelect('name');
+        $collection->addFieldToSelect('image');
+        $collection->addFieldToFilter('name',$name);
         return $collection;
     }
 }
