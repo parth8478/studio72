@@ -1,0 +1,98 @@
+/* CSS Document */
+.process-container {
+  display: none;
+  float: left;
+  width: 100%;
+}
+.process-container > img {
+  margin-top: 5px;
+  width: 30px;
+}
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 121; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.71); /* Black w/ opacity */
+}
+.sms-modal-content {
+	background-color: #ECEFF1;
+	border: 3px solid #e0e0e0;
+	margin: 15% calc(50% - 150px);
+	padding: 20px;
+	position: absolute;
+}
+.verify_mobile > input {
+    clear: both;
+    width: auto !important;
+}
+.verify_mobile .button {
+  clear: both;
+  margin-top: 5px;
+  width: auto;
+}
+.infosms {
+  clear: both;
+  float: left;
+  font-size: 11px;
+}
+.verify {
+    float: left;
+}
+
+.verify_mobile {
+  clear: both;
+  float: left;
+}
+.notverify_yet {
+    background-color: #fbebe7;
+    border: 1px solid red;
+    padding: 5px;
+}
+.verify.resendcode {
+    padding: 5px;
+}
+.mobilenotverifed
+{
+	clear:both;
+	float:left;
+}
+.changemobbtn{
+	padding-top:5px;
+}
+.updateloadimage{
+	display:none;
+}
+.changemobloadimage{
+	display:none;
+}
+.updatedverifyotp, .changenum{
+	float:left;
+}
+.verify {
+  width: 100% !important;
+}
+.error > span {
+  color: #f00;
+}
+.verify_mobile {
+  clear: both;
+  float: left;
+  width: 278px;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+	
+
+
