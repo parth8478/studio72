@@ -677,92 +677,63 @@ class Magecomp_Sms_Helper_Data extends Mage_Adminhtml_Helper_Data
 	{
 		if($this->isEnable())
 		{
-			
-			$url = $this->getApiUrl();
-	
-			$username = $this->getUsername();
-			$password = $this->getPassword();
-			$unicode_msg = $message;
-			$msisdn = $mobilenumbers;
-			
-			$post_body = $this->unicodeSms( $username, $password, $unicode_msg, $msisdn );
-			
- 			$result = $this->sendMessage( $post_body, $url );
-			
-			return $result;
+				$language = $this->getLanguage();
+//				$custMessag = $message;
+				$message = urlencode($message);	
+				$storeId = Mage::app()->getStore()->getStoreId();
+				
+				$senderid = $this->getSenderId(); //Your senderid
+//				$messagetype = "N"; //Type Of Your Message
+				$messagetype = $language; //Type Of Your Message
+				$DReports = "Y"; //Delivery Reports
+				$url=$this->getApiUrl()."sendhttp.php";
+				$user = $this->getUsername();
+				$password = $this->getPassword();
+				
+				$autykey = $this->getAuthkey();
+				$type = $this->getRouttype();
+				
+				$postData = array(
+					'authkey' => $autykey,
+					'mobiles' => $mobilenumbers,
+					'message' => $message,
+					'sender' => $senderid,
+					'route' => $type
+				);
+				
+				$ch = curl_init();
+				if (!$ch){die("Couldn't initialize a cURL handle");}
+				$ret = curl_setopt($ch, CURLOPT_URL,$url);
+				curl_setopt ($ch, CURLOPT_POST, 1);
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+				curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+				curl_setopt ($ch, CURLOPT_POSTFIELDS,$postData);
+				
+				$ret = curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				
+				$curlresponse = curl_exec($ch); // execute
+		    	
+				if(curl_errno($ch))
+					Mage::log(curl_error($ch));
+				
+				if (empty($ret)) 
+				{
+					die(curl_error($ch));
+					curl_close($ch); // close cURL handler
+					
+					return "error";
+				}
+				else
+				{
+					$info = curl_getinfo($ch);
+					curl_close($ch); // close cURL handler
+				}
+		return "true";		
 		}
 		else
 		{
 			return "false";
 		}
-	}
-	public function unicodeSms ( $username, $password, $message, $msisdn ) 
-	{
-		$post_fields = array (
-  			'username' => $username,
-  			'password' => $password,
-			'message'  => $this->stringToUtf16Hex( $message ),
-  			'msisdn'   => $msisdn,
-  			'dca'      => '16bit'
-  		);
-
-  		return makePostBody($post_fields);
-	}
-
-	public function makePostBody($post_fields) 
-	{
-  		$stop_dup_id = $this->makeStopDupId();
-		if ($stop_dup_id > 0) 
-		{
-    		$post_fields['stop_dup_id'] = $this->makeStopDupId();
-		}
-		$post_body = '';
-		foreach( $post_fields as $key => $value ) 
-		{
-			$post_body .= urlencode( $key ).'='.urlencode( $value ).'&';
-		}
-		$post_body = rtrim( $post_body,'&' );
-
-  		return $post_body;
-	}
-
-	public function stringToUtf16Hex( $string ) {
-  		return bin2hex(mb_convert_encoding($string, "UTF-16", "UTF-8"));
-	}
-	public function makeStopDupId() {
-  		return 0;
-	}
-	public function sendMessage( $post_body, $url )
-	{
-	 	$ch = curl_init( );
-		curl_setopt ( $ch, CURLOPT_URL, $url );
-		curl_setopt ( $ch, CURLOPT_POST, 1 );
-		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
-		curl_setopt ( $ch, CURLOPT_POSTFIELDS, $post_body );
-		  // Allowing cUrl funtions 20 second to execute
-		curl_setopt ( $ch, CURLOPT_TIMEOUT, 20 );
-		 // Waiting 20 seconds while trying to connect
-		curl_setopt ( $ch, CURLOPT_CONNECTTIMEOUT, 20 );
-		
-		$response_string = curl_exec( $ch );
-		$curl_info = curl_getinfo( $ch );
-		
-		if ( $response_string == FALSE ) 
-		{
-			curl_close( $ch );
-			return false;
-		} 
-		elseif ( $curl_info[ 'http_code' ] != 200 ) 
-		{
-			curl_close( $ch );
-			return false;
-		}
-		else 
-		{
-			curl_close( $ch );
-			return true;	
-		}
-		curl_close( $ch );
 	}
 	public function getCurruntBal($authkey,$routtype)
 	{

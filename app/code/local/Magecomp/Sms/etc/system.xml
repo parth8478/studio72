@@ -8,7 +8,7 @@
     </tabs>
 	<sections>
 		<sms translate="label" module="sms">
-			<label>BulkSMS Configuration</label>
+			<label>Msg91 Configuration</label>
 			<tab>magecomp</tab>
 			<frontend_type>text</frontend_type>
 			<sort_order>101</sort_order>
@@ -33,26 +33,64 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</enable>
-						
+						<!--<curruntbalance translate="label">
+                            <label>Currunt Balance</label>
+                            <frontend_type>text</frontend_type>
+							<frontend_model>sms/adminhtml_system_config_form_curruntbalance</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+							
+                        </curruntbalance>-->
 						<username translate="label">
-                            <label>BulkSMS Username</label>
+                            <label>Msg91 Username</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-							<comment><![CDATA[The user is free to choose username while registering account with SMS Country. The maximum limit for username is 17 characters and can only contain alphabets and numbers with no blank spaces or special characters. You can create account at  <a href="https://www2.bulksms.com/login.mc">https://www2.bulksms.com/login.mc</a>]]></comment>
+							<comment><![CDATA[The user is free to choose username while registering account with SMS Country. The maximum limit for username is 17 characters and can only contain alphabets and numbers with no blank spaces or special characters. You can create account at  <a href="https://msg91.com/">https://msg91.com/</a>]]></comment>
                         </username>
 				    	<password translate="label">
-                            <label>BulkSMS Password</label>
+                            <label>Msg91 Password</label>
                             <frontend_type>obscure</frontend_type>
                             <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-							<comment>The user is free to choose password while registering account with bulksms.com. The maximum limit for password is 20 characters and can only contain alphabets and numbers with no blank spaces or special characters.</comment>
+							<comment>The user is free to choose password while registering account with SMS Country. The maximum limit for password is 20 characters and can only contain alphabets and numbers with no blank spaces or special characters.</comment>
                         </password>
+						<authkey translate="label">
+                            <label>Authentiketion key</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>The Sender ID refers to the Alphanumeric Identity of the Sender. For Indian sender IDs, 6 alpha characters are accepted for transactional messages. International senders can have alphanumeric IDs with maximum 11 characters.</comment>
+                        </authkey>
+						<routtype translate="label">
+                            <label>Message Type</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>promotinal message = 1 and transactional mesage = 4.</comment>
+                        </routtype>
+						<msg91sendername translate="label">
+                            <label>Sender ID/Sender Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+							<comment>The Sender ID refers to the Alphanumeric Identity of the Sender. For Indian sender IDs, 6 alpha characters are accepted for transactional messages. International senders can have alphanumeric IDs with maximum 11 characters.</comment>
+                        </msg91sendername>
 						<apiurl translate="label,comment" module="sms">
 							<label>API Url</label>
 							<frontend_type>text</frontend_type>
@@ -60,9 +98,18 @@
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
-							<comment>Api Url  https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0</comment>
+							<comment>Api Url :- https://control.msg91.com/api/</comment>
 						</apiurl>
-						
+						<apiurlcallback translate="label,comment" module="sms">
+							<label>Callback URL</label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>sms/adminhtml_system_config_form_callbackurl</frontend_model>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Provide this URL to SMS Country for getting current SMS status.</comment>
+						</apiurlcallback>
 						<adminmobile translate="label,comment" module="sms">
 							<label>Admin Mobile Number</label>
 							<frontend_type>text</frontend_type>
@@ -91,6 +138,27 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</verifyrequired>
+						<smstextchar translate="label,comment" module="sms">
+							<label>SMS Length(In Characters)</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>
+							Specify character length per SMS,
+							for English: 1 SMS = 160 characters, Other languages: 1 SMS = 70 characters</comment>
+						</smstextchar>
+						<smslanguage translate="label,comment" module="sms">
+							<label>SMS Language</label>
+							<frontend_type>select</frontend_type>
+							<source_model>sms/language</source_model>
+							<sort_order>14</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Select language to send SMS, you will be charged per SMS based on language you have selected</comment>
+						</smslanguage>
 						<countrycode translate="label,comment">
 							<label>Default Country</label>
                             <frontend_type>select</frontend_type>
