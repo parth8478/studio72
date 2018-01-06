@@ -46,11 +46,25 @@ $className = Mage::getConfig()->getBlockClassName('megamenu/megamenu');
       }
     });
     jQuery(".icon-menu").on('click', function (e) {
-    jQuery('#nav-mobilemenu').show("slide", { direction: "left" }, 500);
+        e.stopPropagation();
+    jQuery('#nav-mobilemenu').show("slide", { direction: "left" }, 200);
+    jQuery('body').addClass('menu-open');
+    });
+
+jQuery('#nav-mobilemenu').click(function(e){
+     e.stopPropagation();
+})
+jQuery("#close").on('click', function (e) {
+    e.stopPropagation();
+    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 200);
+    jQuery('body').removeClass('menu-open');
 });
 
-jQuery("#close").on('click', function (e) {
-    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 500);
+jQuery(document).click( function(){
+    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 200);
+    jQuery('body').removeClass('menu-open');
 });
+
+
     </script>
 </nav>
