@@ -57,6 +57,7 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>themevast/plugin/jquery-migrate-1.0.0.js</script></action>
                 <action method="addJs"><script>themevast/bootstrap/bootstrap.js</script></action>
                 <action method="addJs"><script>themevast/bootstrap/bootstrap-tooltip.js</script></action>
+                 <action method="addJs"><script>varien/jquery-ui.min.js</script></action>
                 
 
                 <action method="addItem"><type>js</type><name>themevast/themevast.js</name></action>
@@ -147,6 +148,8 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
                 <action method="addJs"><script>varien/js.js</script></action>
+
+
 
                 <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>

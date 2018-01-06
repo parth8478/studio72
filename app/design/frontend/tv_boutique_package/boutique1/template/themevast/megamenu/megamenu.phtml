@@ -15,6 +15,7 @@ $className = Mage::getConfig()->getBlockClassName('megamenu/megamenu');
                                     </a>
                                 </div>
                                 <ul id="nav-mobilemenu" class="mobilemenu nav-collapse collapse">
+                                        <div id="close" class="close">close</div>
                                         <?php echo $_menu ?>
                                         <li class="blog level0 level-top"><a href="<?php echo $this->getUrl('blog')?>" class="level0" title="blog"><span><?php echo $this->__('Blog')?></span></a></li>
                                 </ul>
@@ -44,5 +45,12 @@ $className = Mage::getConfig()->getBlockClassName('megamenu/megamenu');
        jQuery('nav').removeClass("fix-nav");
       }
     });
+    jQuery(".icon-menu").on('click', function (e) {
+    jQuery('#nav-mobilemenu').show("slide", { direction: "left" }, 500);
+});
+
+jQuery("#close").on('click', function (e) {
+    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 500);
+});
     </script>
 </nav>
