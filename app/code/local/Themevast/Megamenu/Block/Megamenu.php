@@ -311,7 +311,7 @@ class Themevast_Megamenu_Block_Megamenu extends Mage_Catalog_Block_Navigation
 
     public function drawMenuItem($children, $level = 1, $columChunk=null)
     {
-        $html = '<ul class="itemMenu level' . $level . '">';
+        $html = '<ul  class="itemMenu level' . $level . '">';
         $keyCurrent = $this->getCurrentCategory()->getId();
         $countChildren = 0;
         $ClassNoChildren = '';
