@@ -56,12 +56,12 @@ jQuery('#nav-mobilemenu').click(function(e){
 })
 jQuery("#close").on('click', function (e) {
     e.stopPropagation();
-    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 200);
+    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 500);
     jQuery('body').removeClass('menu-open');
 });
 
 jQuery(document).click( function(){
-    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 200);
+    jQuery('#nav-mobilemenu').hide("slide", { direction: "left" }, 500);
     jQuery('body').removeClass('menu-open');
 });
 
