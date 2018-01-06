@@ -92,6 +92,11 @@
         $('.actions button').on('click', function(){
                 Mage.Cookies.set('popupNewsletterOff', true); 
         });
+
+        $('.fancybox-close').on('click', function(){
+                Mage.Cookies.set('popupNewsletterOff', true); 
+                console.log("set Cookies");
+        });
     });
 //]]>
 </script>
