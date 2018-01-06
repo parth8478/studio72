@@ -36,6 +36,7 @@
     $_helper = $this->helper('catalog/output');
     $helpLabels = $this->helper('themevast/labels');
 ?>
+
 <?php if(!$_productCollection->count()): ?>
 <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
 <?php else: ?>
@@ -105,6 +106,11 @@
     <?php $_collectionSize = $_productCollection->count() ?>
     <?php $_columnCount = 20 ?>
     <?php $i=0; foreach ($_productCollection as $_product): ?>
+    <?php  
+            $designer_id = $_product->getDesigner();
+            $collection = Mage::getModel('designer/designer')->getCollection();
+            $collection->addFieldToFilter('designer_id',$designer_id);
+    ?>
         <?php if ($i++%$_columnCount==0): ?>
         <ul class="products-grid row">
         <?php endif ?>
@@ -128,6 +134,11 @@
                         </div>
                         <div class="product-shop">
                             <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                           <div class="product-name">
+                            <?php  foreach ($collection as $designer) {
+                                echo "Designed by : <span style='font-size:14px;font-weight:500;'>".$designer->getName()."</span>";
+                            }?>
+                           </div>
                                 <?php echo $this->getPriceHtml($_product, true) ?>
                                 <?php //if($_product->getRatingSummary()): ?>
                                     <?php //echo $this->getReviewsSummaryHtml($_product, 'short') ?>

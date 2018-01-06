@@ -1,25 +1,68 @@
 <?php
+
 $id = $this->getRequest()->getParam('id');
+
 $designers = $this->getDesigner($id);
+
 //echo "<pre>";print_r($designers->getData());
+
 $media = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+
 $base =  Mage::getBaseUrl();
 
+
+
 foreach($designers as $designer){
+
     $image = $designer->getImage();
+
     $name = $designer->getName();
+
     $city = $designer->getCity();
+
     $institute = $designer->getInstitute();
+
     $social_link = $designer->getSocialLink();
+
     $content = $designer->getDescription();
+
     ?>
-    <div class="postWrapper">
-    <?php echo $name;?>
+
+
+
+
+    
+    <div class="designer-view">
+        <div class="bb-block">
+            <div class="profile-image">
+                <img src="<?php echo $media.$image;?>" title="<?php echo $name;?>" alt="<?php echo $name;?>">
+             </div>
+            <div class="designer-detials">
+                <div class="desinger">Desinger</div>
+                
+                <div class="designer-name"><?php echo $name;?></div>
+                <h2><span><?php echo $content;?></span></h2>
+
+              
+
+                <h2><span class="designer-place"><?php echo $city;?></span></h2>
+
+                <h2><span class="designer-institute"><?php echo $institute;?></span></h2>
+                <div class="social_link">
+                    <a href="<?php echo $social_link;?>"><i class="fa fa-facebook"></i></a>
+
+                    <a href="<?php echo $social_link;?>"><i class="fa fa-instagram"></i></a>
+
+                      <a href="<?php echo $social_link;?>"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+                
+
+
+            </div>
+        </div>
     </div>
-    <img src="<?php echo $media.$image;?>" title="<?php echo $name;?>" alt="<?php echo $name;?>">
-    <h2> City : <?php echo $city;?></h2>
-    <h2> Institute : <?php echo $institute;?></h2>
-    <h2> Social Link : <a href="<?php echo $social_link;?>"><?php echo $social_link;?></a></h2>
-    <h2>About : <?php echo $content;?></h2>
+
 <?php }
+
 ?>

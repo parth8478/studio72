@@ -1,17 +1,50 @@
 <?php $designer_name = $this->getRequest()->getParam("q");
+
 $designer_data = $this->getDesignerbyName($designer_name);
+
 $media = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+
 $base =  Mage::getBaseUrl();
+
 if(count($designer_data) > 0){
+
     foreach($designer_data as $data){
+
         $image = $data->getImage();
+
         $id = $data->getDesignerId();
+
         $name = $data->getName();
+
         ?>
-<a href="<?php echo $base."designer/designer/view/id/".$id;?>"><h2>Designer : <?php echo $name;?></h2> </a>
-<a href="<?php echo $base."designer/designer/view/id/".$id;?>"><img src="<?php echo $media.$image; ?>" alt="<?php echo $name;?>"></a>
+        <div class="block">
+        <div class="block-title">
+        <strong><span>Designer</span></strong>
+    	</div>
+    </div>
+    <div class="designer-filter">
+    	<div class="box-img">
+    		<a href="<?php echo $base."designer/designer/view/id/".$id;?>"><img src="<?php echo $media.$image; ?>" alt="<?php echo $name;?>"></a>
+
+</div>
+<div class="social_link">
+									<div class="icons">
+                    <a href="<?php echo $social_link;?>"><i class="fa fa-facebook"></i></a>
+
+                    <a href="<?php echo $social_link;?>"><i class="fa fa-instagram"></i></a>
+
+                      <a href="<?php echo $social_link;?>"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+<a href="<?php echo $base."designer/designer/view/id/".$id;?>"><h2><span><?php echo $name;?></h2></span> </a>
+
+</div>
         <?php 
+
     }
+
 }
 
+
+
 ?>
+
