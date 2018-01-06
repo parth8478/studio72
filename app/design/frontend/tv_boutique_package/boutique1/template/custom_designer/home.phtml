@@ -1,26 +1,95 @@
 <?php
+$slide = Mage::helper('blog')->getSlideCfg();
+if(isset($slide['enabled']) && !$slide['enabled']) return;
+$slider = isset($slide['slide'])?$slide['slide']:'';
+$width = isset($slide['width']) ? $slide['width'] : '900';
+$column = isset($slide['numbercolumn']) ? $slide['numbercolumn'] : '1';
+$numberrow = isset($slide['numberrow']) ? $slide['numberrow'] : '1';
+$speed = isset($slide['speed']) ? $slide['speed'] : '300';
+$auto = isset($slide['auto']) ? $slide['auto'] : 'false';
+$show_image = isset($slide['showimage']) ? $slide['showimage'] : '';
+$image_width = isset($slide['widthimage']) ? $slide['widthimage'] : '100';
+$image_height = isset($slide['heightimage']) ? $slide['heightimage'] : '100';
+$show_title = isset($slide['showtitle']) ? $slide['showtitle'] : '';
+$show_author = isset($slide['showauthor']) ? $slide['showauthor'] : '';
+$show_time = isset($slide['showtime']) ? $slide['showtime'] : '';
+$show_shortcontent = isset($slide['showshortcontent']) ? $slide['showshortcontent'] : '';
+$show_readmore = isset($slide['showreadmore']) ? $slide['showreadmore'] : '';
+?>
+<?php
 $collection = Mage::getModel('designer/designer')->getCollection();
 $collection->addFieldToFilter('featured',1);
 $media = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
 $base =  Mage::getBaseUrl();
 ?>
-    
-    
-<div class="blog-wrapper">
-    <div class="blog-content">
-        <div class="bx-title blog-title"><h2>Our Designers</h2></div>
-        <div class="designer-grid">
-            <?php
-            foreach ($collection as $collections){
-                ?>
-            <a href="<?php echo $base."catalogsearch/result/?q=".$collections->getName(); ?>"><img src="<?php echo $media.$collections->getImage(); ?>" alt="<?php echo $collections->getImage();?>"></a>
-            <?php 
-            echo "Name : ".$collections->getName();
-            }
-            ?>
-        </div>
+
+<div class="designer-wrapper">
+    <div class="designer-content">
+            <div class="bx-title blog-title"><h2>Our Designers</h2></div>
+            <div class="designer-grid">
+            
+                <?php foreach ($collection as $collections): ?>
+                    <div class="item <?php if(!$slider): ?>item col-md-4 col-sm-3 col-sms-3 col-smb-12 <?php endif; ?>">
+                        <div class="item-inner">
+                            <div class="box-img">
+                            <img  width=" <?php echo $image_width ?>" height="<?php echo $image_height ?>" alt="<?php echo $collections->getImage();?>" src="<?php echo $media.$collections->getImage(); ?>" />
+                            
+
+                                <div class="social_link">
+                                    <div class="icons">
+                                <a href="<?php echo $base."catalogsearch/result/?q=".$collections->getName(); ?>"><i class="fa fa-eye"></i></a>
+                    <a href="<?php echo $social_link;?>"><i class="fa fa-facebook"></i></a>
+
+                    <a href="<?php echo $social_link;?>"><i class="fa fa-instagram"></i></a>
+
+                      <a href="<?php echo $social_link;?>"><i class="fa fa-linkedin"></i></a></div>
+                </div>
+                            </div>
+
+                            <div class="box-post-info">
+
+
+                                    <a class="post-name" href="#" ><?php echo $collections->getName(); ?></a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            
+            </div>
+        <script>
+            jQuery(document).ready(function($){
+            $('.designer-content .designer-grid').owlCarousel({
+                <?php if($slide['autoPlay']  == 0): ?>
+                    autoplay: false, 
+                    <?php else: ?>
+                    autoplay: true,
+                    <?php endif; ?>
+                    autoplaySpeed: <?php echo $speed; ?>, 
+                    nav: <?php echo ($slide['navigation'] == 1? "true": "false"); ?>, 
+                    dots: <?php echo ($slide['pagination'] == 1? "true": "false"); ?>, 
+                    loop: true,
+                    autoplayHoverPause: <?php echo ($slide['stopOnHover'] == 1? "true": "false"); ?>,
+                    responsive: {<?php echo $slide['responsive'] ?>},
+                    margin: <?php echo $slide['margin'] ?>,
+                    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+                })
+            });
+        </script>
+        
     </div>
 </div>
-
-
-
