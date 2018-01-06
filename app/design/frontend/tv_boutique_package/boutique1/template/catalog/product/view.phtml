@@ -33,6 +33,12 @@
 ?>
 <?php $_helper = $this->helper('catalog/output'); ?>
 <?php $_product = $this->getProduct(); ?>
+<!-- Designer on Product View Page -->
+<?php  
+	$designer_id = $_product->getDesigner();
+	$collection = Mage::getModel('designer/designer')->getCollection();
+	$collection->addFieldToFilter('designer_id',$designer_id);
+?>
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
@@ -49,16 +55,21 @@
                         <div class="product-name">
                             <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
                         </div>
+                        <div class="product-name">
+                        	<?php  foreach ($collection as $designer) {
+                        		echo "Designed by : <span style='font-size:18px;font-weight:500;'>".$designer->getName()."</span>";
+                        	}?>
+                        </div>
                         <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
                         <?php echo $this->getChildHtml('product_type_data') ?>
 
                         <?php if ($_product->getShortDescription()):?>
-                            <div class="short-description">
+                            <div class="short-description sds">
                                 <!--<h2><?php echo $this->__('Quick Overview') ?></h2>-->
                                 <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                             </div>
                         <?php endif;?>
-                 
+
                         <?php echo $this->getTierPriceHtml() ?>
                         <?php echo $this->getChildHtml('alert_urls') ?>
                         <?php echo $this->getChildHtml('extrahint') ?>
