@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Custom_Registration>
+      <version>0.1.0</version>
+    </Custom_Registration>
+  </modules>
+  <frontend>
+    <routers>
+      <registration>
+        <use>standard</use>
+          <args>
+            <module>Custom_Registration</module>
+            <frontName>registration</frontName>
+          </args>
+      </registration>
+    </routers>
+		<layout>
+		  <updates>
+			<registration>
+			  <file>registration.xml</file>
+			</registration>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <registration>
+        <class>Custom_Registration_Helper</class>
+      </registration>
+    </helpers>
+	<blocks>
+	  <registration>
+		<class>Custom_Registration_Block</class>
+	  </registration>
+	</blocks>
+	<models>
+	  <registration>
+		<class>Custom_Registration_Model</class>
+		<resourceModel>registration_mysql4</resourceModel>
+	  </registration>
+	  <registration_mysql4>
+		<class>Custom_Registration_Model_Mysql4</class>
+		<entities>		  
+			  <registration>
+				<table>designer_registration</table>
+			  </registration>
+		</entities>
+	  </registration_mysql4>
+	</models>
+	<resources>
+	  <registration_setup>
+		<setup>
+		  <module>Custom_Registration</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </registration_setup>
+	  <registration_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </registration_write>
+	  <registration_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </registration_read>
+	</resources>
+  </global>
+  <admin>
+	<routers>
+	  <registration>
+	    <use>admin</use>
+		<args>
+		  <module>Custom_Registration</module>
+		  <frontName>admin_registration</frontName>
+		</args>
+	  </registration>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <registration module="registration">
+		<title>Registration</title>
+		<sort_order>100</sort_order>
+		<children>
+<!--		  <registrationbackend module="registration">
+			<title>Designer Registration</title>
+			<sort_order>0</sort_order>
+			<action>admin_registration/adminhtml_registrationbackend</action>
+		  </registrationbackend>-->
+		  <registration module="registration">
+		    <title>Manage Registration</title>
+			<sort_order>0</sort_order>
+			<action>admin_registration/adminhtml_registration</action>
+		  </registration>
+		</children>
+	  </registration>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<registration translate="title" module="registration">
+			  <title>Registration</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <registrationbackend translate="title">
+			<title>Designer Registration</title>
+		  </registrationbackend>
+		  <registration translate="title">
+			<title>Manage Registration</title>
+			<sort_order>0</sort_order>
+		  </registration>
+			  </children>
+			</registration>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<registration>
+		  <file>registration.xml</file>
+		</registration>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 
