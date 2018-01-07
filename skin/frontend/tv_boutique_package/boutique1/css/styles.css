@@ -9830,6 +9830,15 @@ a.awblog_current_comment {
 }
 .catalogsearch-result-index .col-left.sidebar .icons i.fa:hover{background: #c99947;color: #fff;}
 .catalogsearch-result-index .col-left.sidebar .designer-filter .icons {margin: 20px 0 5px;}
+.pager{margin: 15px 0 30px;}
+.pager p.amount {
+    float: left;
+}
+.pager .limiter {
+    float: right;
+}
+.postWrapper a:hover{text-decoration:none;color: #c99947;}
+
 @media (max-width: 1100px) {
 	.designer-designer-view .designer-view{    padding: 30px 25px 30px 25px;}
 }
@@ -9838,9 +9847,40 @@ a.awblog_current_comment {
 	.designer-designer-view .designer-view .profile-image{width:100%;}
 	.designer-designer-view .designer-view .designer-detials{width:100%;padding-left:0;    margin-top: 20px;}
 	.designer-designer-view .designer-view{height:auto;}
+	.header-quick-access  #nav-mobilemenu{width:80%;left: 0;top: 0; height: 120%;position: fixed;padding-top: 50px;
+		    z-index: 1111111;}
+	.header-quick-access  .mobilemenu{    background: #d0a55d;}
+	.header-quick-access  .mobilemenu a{    color: #fff;}
+	.header-quick-access  #close {color: #fff;position: relative;    font-size: 0;}
+	.header-quick-access  .col-sm-8.left-bar {width: 100%;    height: 47px;}
+	.header-quick-access  .col-sm-4.right-bar {position: absolute;right: 0;z-index: 111;}
+	.header-quick-access  .mobilemenu ul a{    padding-left: 15px;color: #fff;}
+	.menu-open {background: #000000d1;  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;    overflow-y: hidden;
+      position: relative;
+    z-index: 9999999;}
+	.menu-open  .header-quick-access  .col-sm-4.right-bar{z-index:11;}
+	body.menu-open .col-sm-8.left-bar {padding: 0;}
+	.header-quick-access  #close:after {font-family: FontAwesome;
+    content: "\f00d";
+    font-size: 25px;
+    float: left;
+    margin-left: 10px;
+    position: absolute;
+    top: -42px;    right: 0;}
+	.header-quick-access .mobilemenu a:hover, .header-quick-access .mobilemenu a:focus{text-decoration:none;}
+	.menu-open  .header, .menu-open  .category-products, .menu-open  .footer .widget{/* visibility:hidden; */}
+	.menu-open .container-inner {border: none;}
 }
 @media (max-width: 767px) {
 	.designer-designer-view .designer-view .profile-image img{min-height: auto;height: auto;}
 	.designer-designer-view .designer-view{width:100%;}
 	.designer-designer-view .main-page {padding-bottom: 40px;padding-top: 40px;}
+}
+
+
+@media (max-width: 380px) {
+	.header .page-header-content .logo-header {width: 60%;}
 }
