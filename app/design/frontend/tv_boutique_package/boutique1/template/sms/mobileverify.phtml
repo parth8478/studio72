@@ -2,7 +2,7 @@
 if(Mage::getSingleton('customer/session')->getId())
 {
 	$customer = Mage::getModel('customer/customer')->load(Mage::getSingleton('customer/session')->getId());
-	$telephone = $customer->getPrimaryBillingAddress()->getTelephone();
+	$telephone = $customer->getAddressesCollection()->getFirstitem()->getTelephone();
 	$telephone = "********".substr($telephone, -3);
 }
 $isuserVerified = Mage::helper('sms/Data')->isUserVerified(Mage::getSingleton('customer/session')->getId());
