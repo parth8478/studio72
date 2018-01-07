@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <registration_adminhtml_registrationbackend_index>
+	<reference name="content">
+	  <block type="registration/adminhtml_registrationbackend" name="registrationbackend" template="registration/registrationbackend.phtml"/>
+	</reference>
+  </registration_adminhtml_registrationbackend_index>
+  <registration_adminhtml_registration_index>
+	<reference name="content">
+	  <block type="registration/adminhtml_registration" name="registration" />
+	</reference>
+  </registration_adminhtml_registration_index>
+</layout>
