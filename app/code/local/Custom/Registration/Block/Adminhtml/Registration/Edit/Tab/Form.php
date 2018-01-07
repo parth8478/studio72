@@ -9,10 +9,18 @@ class Custom_Registration_Block_Adminhtml_Registration_Edit_Tab_Form extends Mag
         $fieldset = $form->addFieldset("registration_form", array("legend" => Mage::helper("registration")->__("Designer information")));
         
         $attachment = Mage::getModel('registration/registration')->load( $this->getRequest()->getParam('id') );
-        $after_html = '';
+        $after_html1 = '';
+        $after_html2 = '';
         $path = Mage::getBaseUrl('media')."designer/registration/";
+        $attachment1 = $attachment->getAttachment1();
+        $attachment2 = $attachment->getAttachment2();
         $result1 = $path.$attachment->getAttachment1();
-        $result2 = $path.$attachment->getAttachment2(); 
+        $result2 = $path.$attachment->getAttachment2();
+        $after_html1.= '<a href="'.$result1.'" target ="_blank">
+                        <img height="22" width="22" class="small-image-preview v-middle" alt="'.$attachment1.'" title="'.$attachment1.'" id="slider" src="'.$result1.'"/></a>';
+
+        $after_html2.= '<a href="'.$result2.'" target ="_blank">
+                        <img height="22" width="22" class="small-image-preview v-middle" alt="'.$attachment2.'" title="'.$attachment2.'" id="slider" src="'.$result2.'"/></a>';
 
         
         $fieldset->addField(
@@ -82,15 +90,22 @@ class Custom_Registration_Block_Adminhtml_Registration_Edit_Tab_Form extends Mag
         );
         
         $fieldset->addField('attachment1','file', array(
-                 'label'    => Mage::helper('designer')->__('attachement1'),
+                 'label'    => Mage::helper('registration')->__('attachement1'),
                  'name'     => 'attachement1',
-                 'after_element_html' => $result1,
+                 'after_element_html' => $after_html1,
+            )
+        );
+        
+        $fieldset->addField('attachment2','file', array(
+                 'label'    => Mage::helper('registration')->__('attachement2'),
+                 'name'     => 'attachement2',
+                 'after_element_html' => $after_html2,
             )
         );
         
         $fieldset->addField(
             'query',
-            'text',
+            'textarea',
             array(
                  'label'    => Mage::helper('registration')->__('Query'),
                  'class'    => 'required-entry',
