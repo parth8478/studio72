@@ -9873,6 +9873,22 @@ a.awblog_current_comment {
 	.header-quick-access .mobilemenu a:hover, .header-quick-access .mobilemenu a:focus{text-decoration:none;}
 	.menu-open  .header, .menu-open  .category-products, .menu-open  .footer .widget{/* visibility:hidden; */}
 	.menu-open .container-inner {border: none;}
+	.menu-open #wraper_ajax {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    background: #000000d6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 33333;
+    line-height: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;}
+	.menu-open #wraper_ajax i.fa {display: none;}
+	.menu-open .header-quick-access, .menu-open .nav-container, .menu-open .navbar{z-index: auto !important;}
+	.menu-open .header-quick-access #nav-mobilemenu{z-index: 99999;}	
 }
 @media (max-width: 767px) {
 	.designer-designer-view .designer-view .profile-image img{min-height: auto;height: auto;}
