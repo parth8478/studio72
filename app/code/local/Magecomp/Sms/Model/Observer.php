@@ -27,20 +27,21 @@ class Magecomp_Sms_Model_Observer
 	{
 	  try
 	  {	
-	  
-		
+	        Mage::log('customer registration call');
+            Mage::log($_POST['mobile_number']);		
+			
 			$event = $observer->getEvent();
         	$customer = $event->getCustomer();
 			$country_code = $_POST['country_code'];
  			$mobilenumbers = $country_code.$_POST['mobile_number'];
-			$address = Mage::getModel("customer/address");
+			//$address = Mage::getModel("customer/address");
 			// you need a customer object here, or simply the ID as a string.
-			$address->setCustomerId($customer->getId());
-			$address->setFirstname($customer->getFirstname());
-			$address->setLastname($customer->getLastname());
-			$address->setTelephone($mobilenumbers);
-			$address->setIsDefaultBilling('1');
-			$address->save();
+		//	$address->setCustomerId($customer->getId());
+			//$address->setFirstname($customer->getFirstname());
+			//$address->setLastname($customer->getLastname());
+			//$address->setTelephone($mobilenumbers);
+			//$address->setIsDefaultBilling('1');
+			//$address->save();
 			
 			if($mobilenumbers)
 			{
