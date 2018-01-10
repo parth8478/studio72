@@ -46,7 +46,7 @@ class Magecomp_Sms_Helper_Data extends Mage_Adminhtml_Helper_Data
 	public function generateRandomString()
 	{
 		$length = $this->getOtpStringlenght();
-		$randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+		$randomString = substr(str_shuffle("0123456789"), 0, $length);
 
 		return $randomString;
 	}
