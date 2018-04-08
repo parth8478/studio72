@@ -9908,3 +9908,5 @@ a.awblog_current_comment {
 .terms-page h1{text-align: center}
 .terms-page h2{font-weight: 500;margin-bottom: 10px;}
 .terms-content{margin-bottom:25px;}
+.shipping-policy .terms-content ol{list-style-position: inside}
+.shipping-policy .terms-content ol li{padding:10px}
