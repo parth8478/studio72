@@ -9900,3 +9900,8 @@ a.awblog_current_comment {
 @media (max-width: 380px) {
 	.header .page-header-content .logo-header {width: 60%;}
 }
+
+
+.home-banner{
+  max-width: 100%;
+}
