@@ -9908,3 +9908,16 @@ a.awblog_current_comment {
 .terms-page h1{text-align: center}
 .terms-page h2{font-weight: 500;margin-bottom: 10px;}
 .terms-content{margin-bottom:25px;}
+.shipping-policy .terms-content ol{list-style-position: inside}
+.shipping-policy .terms-content ol li{padding:5px;list-style: decimal}
+.shipping-policy .terms-content span.shpping-dark{font-weight: 600}
+.shipping-policy .terms-content p{margin-top: 2px;margin-bottom: 1px}
+.designer-terms-condition .terms-content ol{list-style-position: inside}
+.designer-terms-condition .terms-content ol li{padding:5px;list-style: decimal}
+.disclaimer .terms-content p{margin-top: 12px;margin-bottom: 12px}
+.privacy-policy .terms-content ol{list-style-position: inside}
+.privacy-policy .terms-content ol li{padding:5px;list-style: decimal}
+.privacy-policy .terms-content ol ul li{padding:5px;list-style: inside}
+.privacy-policy .terms-content ol span.title{font-weight: 600;text-decoration: underline}
+.privacy-policy .info{margin-bottom: 10px;margin-top:10px;}
+.privacy-policy .privacy-contact p{margin-top:10px;margin-bottom:10px;}
