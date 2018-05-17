@@ -6136,7 +6136,7 @@ p.welcome-msg {
   .header .logo {
     display: block;
     text-align: left;
-    margin-top: 35px; }
+    margin-top: 18px; }
   .header .logo strong {
     position: absolute;
     top: -999em;
@@ -8005,6 +8005,17 @@ ul.cattabs {
 
 .postContent img {
   margin-bottom: 15px; }
+
+.postContent h4{
+      padding-bottom: 12px; 
+}
+
+.postContent h2{
+    font-size: 18px;
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+
 
 /* Blog Page ==================================================*/
 .blog-post-view .toolbar .sorter, .blog-index-list .toolbar .sorter {
