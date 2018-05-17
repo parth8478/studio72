@@ -6809,7 +6809,7 @@ p.welcome-msg {
     padding: 0;
     display: inline-block;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #333;
     line-height: 50px;
@@ -6917,7 +6917,7 @@ p.welcome-msg {
       text-transform: uppercase;
       font-weight: 500;
       color: #333;
-      font-size: 16px; }
+      font-size: 14px; }
       .nav_megamenu #megamenu_link ul li.level0 > a:after {
         content: '';
         height: 2px;
