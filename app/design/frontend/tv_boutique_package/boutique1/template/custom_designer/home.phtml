@@ -32,18 +32,22 @@ $base =  Mage::getBaseUrl();
                     <div class="item <?php if(!$slider): ?>item col-md-4 col-sm-3 col-sms-3 col-smb-12 <?php endif; ?>">
                         <div class="item-inner">
                             <div class="box-img">
-                            <img  width=" <?php echo $image_width ?>" height="<?php echo $image_height ?>" alt="<?php echo $collections->getImage();?>" src="<?php echo $media.$collections->getImage(); ?>" />
+                                
+                            <img  width=" <?php echo $image_width ?>" height="<?php echo $image_height ?>" alt="<?php echo $collections->getImage();?>" src="<?php echo $media.$collections->getImage(); ?>" /> </a>
                             
 
                                 <div class="social_link">
+                                    
                                     <div class="icons">
-                                <a href="<?php echo $base."catalogsearch/result/?q=".$collections->getName(); ?>"><i class="fa fa-eye"></i></a>
-                    <a href="<?php echo $social_link;?>"><i class="fa fa-facebook"></i></a>
-
-                    <a href="<?php echo $social_link;?>"><i class="fa fa-instagram"></i></a>
-
-                      <a href="<?php echo $social_link;?>"><i class="fa fa-linkedin"></i></a></div>
-                </div>
+                                        <a href="<?php echo $base."catalogsearch/result/?q=".$collections->getName(); ?>" title="products"><i class="fa fa-eye"></i></a>
+                                        <a href="<?php echo $social_link;?>" title="facebook"><i class="fa fa-facebook"></i></a>
+                                        <a href="<?php echo $social_link;?>" title="instagram"><i class="fa fa-instagram"></i></a>
+                                        <a href="<?php echo $social_link;?>" title="linkedin"><i class="fa fa-linkedin"></i></a>
+                                        <a href="<?php echo $base."designer/designer/view/id/".$collections->getId(); ?>" title="profile"><i class="fa fa-hand-o-up"></i></a>
+                                        
+                                    </div>
+                                   
+                                </div>
                             </div>
 
                             <div class="box-post-info">
