@@ -17,7 +17,8 @@ $className = Mage::getConfig()->getBlockClassName('megamenu/megamenu');
                                 <ul id="nav-mobilemenu" class="mobilemenu nav-collapse collapse">
                                         <div id="close" class="close">close</div>
                                         <?php echo $_menu ?>
-                                        <li class="blog level0 level-top"><a href="<?php echo $this->getUrl('blog')?>" class="level0" title="blog"><span><?php echo $this->__('Blog')?></span></a></li>
+                                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('megamenu_link_mobile')->toHtml(); ?> 
+                                        <!-- <li class="blog level0 level-top"><a href="<?php echo $this->getUrl('blog')?>" class="level0" title="blog"><span><?php echo $this->__('Blog')?></span></a></li> -->
                                 </ul>
                         </div>
                 </div>
