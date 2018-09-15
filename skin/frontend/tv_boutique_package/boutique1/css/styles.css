@@ -9942,3 +9942,16 @@ a.awblog_current_comment {
 .privacy-policy .terms-content ol span.title{font-weight: 600;text-decoration: underline}
 .privacy-policy .info{margin-bottom: 10px;margin-top:10px;}
 .privacy-policy .privacy-contact p{margin-top:10px;margin-bottom:10px;}
+
+
+
+
+/*hide header and footer */
+
+.header-quick-access{
+  display: none !important;
+}
+
+.header-icon{
+  display: none !important;
+}
