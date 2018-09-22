@@ -8020,11 +8020,15 @@ ul.cattabs {
     font-weight: bold;
 }
 
-.designer-image .download{
-  position: relative;
+.designer-image {
+ /* position: relative;
   top: -50px;
-  left: 20px;
+  left: 20px;*/
+    margin: 30px;
+}
 
+.download{
+  margin: 10px !important;
 }
 
 /* Blog Page ==================================================*/
