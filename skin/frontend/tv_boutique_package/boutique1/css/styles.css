@@ -9955,3 +9955,12 @@ a.awblog_current_comment {
 .header-icon{
   display: none !important;
 }
+
+/* catalog search page */
+
+.designer-filter{
+  text-align: center;
+}
+.designer-filter .box-img img{
+  border-radius: 100%;
+}
