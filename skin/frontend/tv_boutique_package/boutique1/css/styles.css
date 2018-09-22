@@ -8024,7 +8024,8 @@ ul.cattabs {
  /* position: relative;
   top: -50px;
   left: 20px;*/
-    margin: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .download{
