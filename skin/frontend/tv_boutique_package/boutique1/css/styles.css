@@ -9724,10 +9724,10 @@ a.awblog_current_comment {
 .designer-designer-view .designer-view .designer-detials .desinger {
     text-align: center;
     background: #000;
-    width: 115px;
+    width:fit-content;
     margin: 0 auto;
     color: #fff;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 .designer-designer-view .main-page {
